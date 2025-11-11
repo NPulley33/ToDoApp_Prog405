@@ -15,11 +15,14 @@
             this.Description = description;
         }
 
+        //update this like below
         public Task(string name)
         { 
             this.Name= name;
             this.Description = string.Empty;
         }
+
+        public Task() : this("no name") { }
 
         public void UpdateDescription(string newDescription)
         { 

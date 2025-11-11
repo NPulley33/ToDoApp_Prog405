@@ -3,9 +3,11 @@ using ToDoApp;
 
 namespace ToDoTests
 {
+    //unit test todo & unit test task
     public class UnitTest1
     {
         [Fact]
+        [Category("To Do")]
         public void ToDoAddRemoveTest()
         {
             ToDo list = new ToDo();

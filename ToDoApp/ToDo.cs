@@ -9,6 +9,7 @@ namespace ToDoApp
 
         public ToDo() 
         { 
+            //keep in constructor vs in line- memory
             Tasks = new List<Task>();
         }
 
