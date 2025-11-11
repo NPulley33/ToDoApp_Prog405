@@ -15,3 +15,12 @@ A Dueable Task (yes Jeff, I stole that pun) is a Task that has a due date
 
 If making this a whole service app again, should make models/request classes?
 I feel like I'm missing something or this isn't robust enough. Maybe I'm just a simple guy who needs a simple To Do app
+
+
+11/10 
+
+- Added WPF application
+- Started work on seperateing view & models
+- Models are ToDoApp classes
+- added view & model for displaying a task
+- started working on a veiw & model for displaying a ToDo/task list & functionality

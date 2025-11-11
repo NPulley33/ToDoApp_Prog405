@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPFToDoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFToDoApp"
+        xmlns:views="clr-namespace:WPFToDoApp.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        DataContext="WPFToDoApp.ViewModels.TaskViewModel">
+    <Grid>
+        <ScrollViewer Margin="0,0,584,0"/>
+        <views:TaskControl x:Name="UCTask">
+        </views:TaskControl>
+        <views:ToDoControl>
+        </views:ToDoControl>
+    </Grid>
+</Window>
