@@ -34,5 +34,10 @@
             IsCompleted = true;
         }
 
+        public void UpdateName(string newName)
+        { 
+            if (!IsCompleted) Name = newName;
+        }
+
     }
 }

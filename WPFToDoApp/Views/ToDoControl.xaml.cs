@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ToDoApp;
+using WPFToDoApp.ViewModels;
 
 namespace WPFToDoApp.Views
 {
@@ -22,10 +23,12 @@ namespace WPFToDoApp.Views
     public partial class ToDoControl : UserControl
     {
         ToDo taskList;
+
         public ToDoControl()
         {
             InitializeComponent();
-            
+            taskList = new ToDo();
+            this.DataContext = new ToDoViewModel(taskList);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -7,10 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="262,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="26"/>
-        <TextBox HorizontalAlignment="Left" Margin="262,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="26"/>
+        <StackPanel Name="TaskListSidebar"  Margin="0,0,570,0">
+            <Label Content="{Binding Path=LastTaskName, Mode=OneWay}"/>
+            <Button Content="Show Task"/>
+
+        </StackPanel>
+        <TextBox Text ="{Binding Path = NewTaskName, Mode = TwoWay}" HorizontalAlignment="Left" Margin="262,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="26"/>
+        <TextBox Text ="{Binding Path = NewTaskDescription, Mode = TwoWay}" HorizontalAlignment="Left" Margin="262,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="26"/>
         <Label Content="Task Name" HorizontalAlignment="Left" Margin="262,217,0,0" VerticalAlignment="Top" Width="138"/>
         <Label Content="Task Description" HorizontalAlignment="Left" Margin="262,282,0,0" VerticalAlignment="Top" Width="138"/>
-        <Button Content="Add Task" HorizontalAlignment="Left" Margin="262,360,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click"/>
+        <Button Content="Add Task" Command="{ Binding AddTask }" CommandParameter="{Binding}" HorizontalAlignment="Left" Margin="262,360,0,0" VerticalAlignment="Top" Width="138" Click="Button_Click"/>
     </Grid>
 </UserControl>

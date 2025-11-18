@@ -9,7 +9,6 @@
         Title="MainWindow" Height="450" Width="800"
         DataContext="WPFToDoApp.ViewModels.TaskViewModel">
     <Grid>
-        <ScrollViewer Margin="0,0,584,0"/>
         <views:TaskControl x:Name="UCTask">
         </views:TaskControl>
         <views:ToDoControl>

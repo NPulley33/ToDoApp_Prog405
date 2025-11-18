@@ -1,6 +1,9 @@
-﻿using System.Configuration;
+﻿using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Data;
 using System.Windows;
+using ToDoApp;
+using WPFToDoApp.ViewModels;
 
 namespace WPFToDoApp
 {
@@ -9,6 +12,10 @@ namespace WPFToDoApp
     /// </summary>
     public partial class App : Application
     {
+        public static ObservableCollection<ToDoViewModel> ToDos;
+
+
+
     }
 
 }

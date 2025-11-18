@@ -4,7 +4,7 @@ using ToDoApp;
 namespace ToDoTests
 {
     //unit test todo & unit test task
-    public class UnitTest1
+    public class ToDoAppTests
     {
         [Fact]
         [Category("To Do")]

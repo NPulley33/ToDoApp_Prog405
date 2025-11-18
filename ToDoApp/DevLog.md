@@ -24,3 +24,13 @@ I feel like I'm missing something or this isn't robust enough. Maybe I'm just a 
 - Models are ToDoApp classes
 - added view & model for displaying a task
 - started working on a veiw & model for displaying a ToDo/task list & functionality
+
+TODO: refactor tests: break them up
+
+11/17
+
+- Adding commands, adding on to ToDoControl
+- Need to Knows:
+	- How to dynamically show elements on screen (ex. add a task so add elements to show that task)
+	- How to get TaskControl and ToDoControl to talk to each other- want to use TaskControl to display a selected Task from ToDoControl
+	- How to add tests for WPF? error when trying to use xUnit

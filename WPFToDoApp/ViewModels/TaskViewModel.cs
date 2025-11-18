@@ -8,7 +8,7 @@ using ToDoApp;
 
 namespace WPFToDoApp.ViewModels
 {
-    public class TaskViewModel : INotifyPropertyChanged
+    public class TaskViewModel : BaseViewModel
     {
 
         private ToDoApp.Task task;
@@ -31,18 +31,8 @@ namespace WPFToDoApp.ViewModels
                 if (Description != value)
                 { 
                     task.UpdateDescription(value);
-                    RaisePropertyChanged();
+                    base.RaisePropertyChangedEvent();
                 }
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void RaisePropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }
