@@ -9,13 +9,14 @@ namespace MVCToDoWebApp.Controllers
         // GET: TaskConroller
         public ActionResult Index(int id)
         {
-            return View();
+            return View(Program.repo.database[0].TaskViewModels);
         }
 
         // GET: TaskConroller/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            TaskViewModel t = Program.repo.database[0].TaskViewModels.FirstOrDefault(t => t.Id == id);
+            return View(t);
         }
 
         // GET: TaskConroller/Create
@@ -31,6 +32,9 @@ namespace MVCToDoWebApp.Controllers
         {
             try
             {
+                string Name = collection["Name"];
+                string Description = collection["Description"];
+                Program.repo.database[0].AddTask(Name, Description);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -42,7 +46,8 @@ namespace MVCToDoWebApp.Controllers
         // GET: TaskConroller/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            TaskViewModel t = Program.repo.database[0].TaskViewModels.FirstOrDefault(t => t.Id == id);
+            return View(t);
         }
 
         // POST: TaskConroller/Edit/5
@@ -52,6 +57,13 @@ namespace MVCToDoWebApp.Controllers
         {
             try
             {
+                string Name = collection["Name"];
+                string Description = collection["Description"];
+                bool completed = collection["IsCompleted"] != false;
+                TaskViewModel t = Program.repo.database[0].TaskViewModels.FirstOrDefault(t => t.Id == id);
+                t.UpdateName(Name);
+                t.UpdateDescription(Description);
+                if (completed) t.Complete();
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -63,7 +75,9 @@ namespace MVCToDoWebApp.Controllers
         // GET: TaskConroller/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            TaskViewModel t = Program.repo.database[0].TaskViewModels.FirstOrDefault(t => t.Id == id);
+            Program.repo.database[0].TaskViewModels.Remove(t);
+            return RedirectToAction("Index");
         }
 
         // POST: TaskConroller/Delete/5

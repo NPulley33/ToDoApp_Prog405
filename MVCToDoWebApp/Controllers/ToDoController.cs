@@ -9,20 +9,25 @@ namespace MVCToDoWebApp.Controllers
     {
         // GET: ToDoController
 
-        public static List<ToDoViewModel> Repo { get; set; }
+        //public static List<ToDoViewModel> Repo { get; set; }
 
-        public ToDoController(IToDoViewModels viewModels) { Repo = viewModels.Repo; }
+        public ToDoController(IToDoViewModels viewModels) { Program.repo.database = viewModels.Repo; }
 
         public ActionResult Index()
         {
-            return View(Repo);
+            return View(Program.repo.database);
         }
 
         // GET: ToDoController/Details/5
         public ActionResult Details(int id)
         {
-            //return RedirectToAction("Index", "Task", id);
-            return View();
+            Program._id = 0;
+            for (int i = 0; i < Program.repo.database.Count; i++)
+            { 
+                if (Program.repo.database[i].Id == id) Program._id = id;
+            }
+            return RedirectToAction("Index", "Task", id);
+            //return View();
         }
 
         // GET: ToDoController/Create
@@ -50,7 +55,7 @@ namespace MVCToDoWebApp.Controllers
             </div>
                  */
 
-                Repo.Add(t);
+                Program.repo.database.Add(t);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -62,7 +67,7 @@ namespace MVCToDoWebApp.Controllers
         // GET: ToDoController/Edit/5
         public ActionResult Edit(int id)
         {
-            ToDoViewModel t = Repo.FirstOrDefault(t => t.Id == id);
+            ToDoViewModel t = Program.repo.database.FirstOrDefault(t => t.Id == id);
             return View(t);
         }
 
@@ -73,7 +78,7 @@ namespace MVCToDoWebApp.Controllers
         {
             try
             {
-                ToDoViewModel t = Repo.FirstOrDefault(t => t.Id == id);
+                ToDoViewModel t = Program.repo.database.FirstOrDefault(t => t.Id == id);
                 t.UpdateName(collection["Name"]);
                 t.IsCompleted = collection["IsCompleted"] != false;
                 return RedirectToAction(nameof(Index));
@@ -87,8 +92,8 @@ namespace MVCToDoWebApp.Controllers
         // GET: ToDoController/Delete/5
         public ActionResult Delete(int id)
         {
-            ToDoViewModel t = Repo.FirstOrDefault(t => t.Id == id);
-            Repo.Remove(t);
+            ToDoViewModel t = Program.repo.database.FirstOrDefault(t => t.Id == id);
+            Program.repo.database.Remove(t);
             return RedirectToAction("Index");
         }
 

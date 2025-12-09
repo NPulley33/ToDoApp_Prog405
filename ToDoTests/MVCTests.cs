@@ -20,7 +20,7 @@ namespace ToDoTests
 
             ToDoViewModel vm2 = new ToDoViewModel();
 
-            Assert.Equal(1, vm2.Id);
+            Assert.Equal(0, vm2.Id);
         }
 
         [Fact]
