@@ -22,13 +22,13 @@ namespace WPFToDoApp.Views
     /// </summary>
     public partial class ToDoControl : UserControl
     {
-        ToDoViewModel\ taskList;
+        ToDo taskList;
 
         public ToDoControl()
         {
             InitializeComponent();
-            taskList = new ToDoViewModel\();
-            this.DataContext = new ToDoViewModel(taskList);
+            taskList = new ToDo();
+            //this.DataContext = new ToDo(taskList);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

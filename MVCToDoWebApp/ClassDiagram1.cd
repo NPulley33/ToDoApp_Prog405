@@ -33,7 +33,7 @@
   <Class Name="MVCToDoWebApp.Models.ToDoViewModel">
     <Position X="1.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <HashCode>AAACACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Models\ToDoViewModel.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -46,16 +46,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MVCToDoWebApp.Controllers.TaskController">
-    <Position X="10.75" Y="5.25" Width="2" />
+    <Position X="10.75" Y="5.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAAAAAABAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
       <FileName>Controllers\TaskController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MVCToDoWebApp.Controllers.ToDoController">
     <Position X="10.75" Y="3" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAABAAEAAEACAAEAAAAAAAA=</HashCode>
       <FileName>Controllers\ToDoController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -86,7 +86,7 @@
   <Interface Name="MVCToDoWebApp.Models.IIdentifiable">
     <Position X="8.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Models\IIdentifiable.cs</FileName>
     </TypeIdentifier>
   </Interface>
