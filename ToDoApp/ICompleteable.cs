@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ToDoApp
 {
-    internal interface ICompleteable
+    public interface ICompleteable
     {
         public bool IsCompleted { get; set; }
 

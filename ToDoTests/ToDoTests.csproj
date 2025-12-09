@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MVCToDoWebApp\MVCToDoWebApp.csproj" />
     <ProjectReference Include="..\ToDoApp\ToDoApp.csproj" />
   </ItemGroup>
 

@@ -11,7 +11,7 @@ namespace WPFToDoApp.ViewModels
 {
     public class ToDoViewModel : BaseViewModel
     {
-        private ToDo taskList;
+        private ToDoViewModel\ taskList;
         private ToDoApp.Task newTask;
         public ICommand AddTask { get; set; }
         public ICommand ShowTask { get; set; }
@@ -54,7 +54,7 @@ namespace WPFToDoApp.ViewModels
         }
 
 
-        public ToDoViewModel(ToDo taskList)
+        public ToDoViewModel(ToDoViewModel\ taskList)
         { 
             this.taskList = taskList;
             newTask = new ToDoApp.Task();

@@ -4,23 +4,28 @@ namespace ToDoApp
 {
     public class ToDo : ICompleteable
     {
+        public string Name { get; set; }
         public List<Task> Tasks;
         public bool IsCompleted { get; set; }
 
         public ToDo() 
         { 
-            //keep in constructor vs in line- memory
             Tasks = new List<Task>();
         }
 
-        public void AddTask(string name, string description)
+        public ToDo(string name) : this()
+        { 
+            this.Name = name;
+        }
+
+        public virtual void AddTask(string name, string description)
         {
             Tasks.Add(new Task(name, description));
         }
 
-        public void AddTask(string name) => Tasks.Add(new Task(name));
+        public virtual void AddTask(string name) => Tasks.Add(new Task(name));
 
-        public void AddTask(Task task) => Tasks.Add(task);
+        public virtual void AddTask(Task task) => Tasks.Add(task);
 
         public void AddTask(string name, string description, DateTime dueDate)
         {
@@ -36,7 +41,7 @@ namespace ToDoApp
 
 
 
-        public void DeleteTask(string taskName)
+        public virtual void DeleteTask(string taskName)
         {
             foreach (Task t in Tasks)
             {
@@ -48,7 +53,7 @@ namespace ToDoApp
             }
         }
 
-        public void CompleteTask(string taskName)
+        public virtual void CompleteTask(string taskName)
         {
             foreach (Task t in Tasks)
             {
@@ -79,6 +84,11 @@ namespace ToDoApp
                 if (t.Name == taskName) return true;
             }
             return false;
+        }
+
+        public void UpdateName(string newName)
+        {
+            if (!IsCompleted) Name = newName;
         }
 
         //could add:
