@@ -31,7 +31,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="MVCToDoWebApp.Models.ToDoViewModel">
-    <Position X="1.75" Y="4.5" Width="1.5" />
+    <Position X="1.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACACAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>Models\ToDoViewModel.cs</FileName>
@@ -75,6 +75,14 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="MVCToDoWebApp.Models.ToDoViewModels">
+    <Position X="1.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ToDoViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="ToDoApp.ICompleteable">
     <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier />
@@ -95,6 +103,13 @@
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MVCToDoWebApp.Models.IToDoViewModels">
+    <Position X="8.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ToDoViewModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

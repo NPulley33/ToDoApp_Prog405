@@ -5,7 +5,7 @@ namespace MVCToDoWebApp
 {
     public class Program
     {
-        //public static ToDoRepo repo = new ToDoRepo(); 
+        public static ToDoRepo repo = new ToDoRepo(); 
         //i know this is a bad but i don't know where else to put the repo since we didn't do it in class
 
         public static void Main(string[] args)
